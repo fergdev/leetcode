@@ -22,6 +22,17 @@ fun IntArray.str(): String {
     return sb.toString()
 }
 
+fun <T> Array<T>.str(): String {
+    val sb = StringBuilder("[")
+    forEachIndexed { index, element ->
+        sb.append(element)
+        if (index != this.size - 1) sb.append(",")
+    }
+
+    sb.append("]")
+    return sb.toString()
+}
+
 fun Array<IntArray>.str(): String {
     val sb = StringBuilder()
     this.forEach {
