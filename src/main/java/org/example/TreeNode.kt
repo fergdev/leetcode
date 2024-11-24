@@ -17,7 +17,6 @@ data class TreeNode(
     var right: TreeNode? = null,
 )
 
-
 fun str(root: TreeNode): String {
     val sb = StringBuilder("[")
     val s = Stack<TreeNode>()

@@ -19,7 +19,8 @@ fun ListNode?.str(): String {
     return sb.toString()
 }
 
-fun createListNode(vararg v: Int): ListNode {
+fun createListNode(vararg v: Int): ListNode? {
+    if(v.isEmpty()) return null
     val head = ListNode(v[0])
 
     var h = head
